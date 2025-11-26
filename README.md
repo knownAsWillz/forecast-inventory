@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# Inventory Reorder Predictor
 
-## Project info
+## Overview
+This project is a React web application that predicts which products need to be reordered based on their current inventory levels, average weekly sales, and replenishment lead time. The application fetches more than 100 real product names from an online API and processes them into a dashboard that shows which items require restocking.
 
-**URL**: https://lovable.dev/projects/8631debf-ecf9-433f-a7c7-58f8bd1a7c31
+# Features
 
-## How can I edit this code?
+## Product Fetching
+The app retrieves over 100 products from a public API. Each product includes a name from the API, while other required values such as inventory levels, weekly sales, and lead time are generated within the app.
 
-There are several ways of editing your application.
+## Prediction System
+The application uses a simple prediction model to determine whether a product needs to be reordered. It evaluates inventory, sales pace, and how many days it takes to restock.
 
-**Use Lovable**
+## Dashboard
+The app displays all products in a clean and simple dashboard. Each row shows the product name, inventory, weekly sales, lead time, and whether it should be reordered. Items that need restocking are clearly marked.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8631debf-ecf9-433f-a7c7-58f8bd1a7c31) and start prompting.
+## How It Works
+### Data Flow
+1. The app fetches product names from the API.
+2. Each product is assigned inventory, sales, and lead time values.
+3. The prediction system evaluates each product.
+4. The dashboard displays the results.
 
-Changes made via Lovable will be committed automatically to this repo.
+## User Interaction
+The user simply opens the app. All data loading, prediction processing, and display updates happen automatically.
 
-**Use your preferred IDE**
+## Requirements
+- React environment
+- Internet connection for product fetching
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Running the App
+Install the required packages and start the development server using your package manager. The app runs locally in the browser.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Purpose
+This project follows the activity requirements provided in the PDF: creating a React application that uses a prediction model and processes real product data to produce reorder suggestions.
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8631debf-ecf9-433f-a7c7-58f8bd1a7c31) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Notes
+- The app keeps the interface simple.
+- All prediction work happens directly in the browser.
